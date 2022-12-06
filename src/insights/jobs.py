@@ -1,9 +1,15 @@
 from functools import lru_cache
 from typing import List, Dict
 
+import csv
+
 
 @lru_cache
 def read(path: str) -> List[Dict]:
+    with open(path, mode='r') as file:
+        read_file = csv.DictReader(file)
+        read_list = list(read_file)
+    return read_list
     """Reads a file from a given path and returns its contents
 
     Parameters
