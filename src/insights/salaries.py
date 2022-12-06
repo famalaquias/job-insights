@@ -1,7 +1,15 @@
 from typing import Union, List, Dict
+from src.insights.jobs import read
 
 
 def get_max_salary(path: str) -> int:
+    salary = read(path)
+    max_salary = []
+
+    for salaries in salary:
+        if salaries["max_salary"].isdigit():
+            max_salary.append(int(salaries["max_salary"]))
+    return max(max_salary)
     """Get the maximum salary of all jobs
 
     Must call `read`
