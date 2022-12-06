@@ -9,6 +9,7 @@ def read(path: str) -> List[Dict]:
         read_file = csv.DictReader(file)
         read_list = list(read_file)
     return read_list
+    
     """Reads a file from a given path and returns its contents
 
     Parameters
