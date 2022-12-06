@@ -9,7 +9,7 @@ def read(path: str) -> List[Dict]:
         read_file = csv.DictReader(file)
         read_list = list(read_file)
     return read_list
-    
+
     """Reads a file from a given path and returns its contents
 
     Parameters
@@ -26,6 +26,13 @@ def read(path: str) -> List[Dict]:
 
 
 def get_unique_job_types(path: str) -> List[str]:
+    jobs = read(path)
+    unique_job = set()
+
+    for job in jobs:
+        if job["job_type"] is not None:
+            unique_job.add(job["job_type"])
+    return unique_job
     """Checks all different job types and returns a list of them
 
     Must call `read`
