@@ -52,7 +52,7 @@ def get_min_salary(path: str) -> int:
     raise NotImplementedError
 
 
-def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:    
+def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
     if (
         job.get("min_salary") is None
         or job.get("max_salary") is None
@@ -99,7 +99,6 @@ def filter_by_salary_range(
         try:
             if matches_salary_range(job, salary):
                 filter_salary.append(job)
-        
         except ValueError:
             print("Error!")
     return filter_salary
