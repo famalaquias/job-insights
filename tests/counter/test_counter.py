@@ -1,11 +1,13 @@
+import pytest
 from src.pre_built.counter import count_ocurrences
 
 
 def test_counter():
-    path = "src/jobs.csv"
-    words = ["python", "PYTHON", "javascript", "JAVAscript"]
-    expected_results = [1639, 1639, 122, 122]
+    pass
+    assert count_ocurrences("data/jobs.csv", "python") == 1639
+    assert count_ocurrences("data/jobs.csv", "PYTHON") == 1639
+    assert count_ocurrences("data/jobs.csv", "javascript") == 122
+    assert count_ocurrences("data/jobs.csv", "JavaScript") == 122
 
-    for i in range(len(words)):
-        count_word = count_ocurrences(path, words[i])
-        assert count_word == expected_results[i]
+    with pytest.raises(FileNotFoundError):
+        count_ocurrences("data/jobs.json", "python")

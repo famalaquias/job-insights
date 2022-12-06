@@ -92,15 +92,15 @@ def filter_by_salary_range(
     jobs: List[dict],
     salary: Union[str, int]
 ) -> List[Dict]:
-    filter_salary = list()
+    all_jobs = []
 
     for job in jobs:
         try:
             if matches_salary_range(job, salary):
-                filter_salary.append(job)
-        except ValueError:
-            print("Erro!")
-    return filter_salary
+                all_jobs.append(job)
+        except ValueError as error:
+            print(error)
+    return all_jobs
 
     """Filters a list of jobs by salary range
 
