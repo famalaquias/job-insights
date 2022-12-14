@@ -58,5 +58,5 @@ python3 -m pytest
 ```
 
 
-<br/>
+<hr/>
 Realizado de acordo com as diretrizes do <a href="https://blog.betrybe.com/wp-content/uploads/2020/12/Código-de-Conduta-Trybe-1.pdf" >Código de Conduta e do Manual da Pessoa Estudante da Trybe</a>.</div>
