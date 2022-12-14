@@ -29,5 +29,6 @@ Trata-se de uma aplicação web desenvolvida com o framework Flask com o objetiv
 Faça o clone do repositório e entre na pasta do projeto:
 
 ```sh
-git clone git@github.com:famalaquias/mongodb-car-shop.git && cd mongodb-car-shop
+git clone git@github.com:famalaquias/job-insights.git && cd job-insights
 ```
+
