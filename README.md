@@ -32,3 +32,31 @@ Faça o clone do repositório e entre na pasta do projeto:
 git clone git@github.com:famalaquias/job-insights.git && cd job-insights
 ```
 
+#### Rodando a Aplicação
+
+1. Crie o ambiente virtual para o projeto:
+```sh
+python3 -m venv .venv && source .venv/bin/activate
+```
+
+2. Instale as dependências:
+```sh
+python3 -m pip install -r dev-requirements.txt
+```
+
+3. Inicialize o Flask:
+```sh
+flask run
+```
+
+
+#### Rodando os Testes
+
+Para fazer a verificação dos testes, utilize o comando:
+```sh
+python3 -m pytest
+```
+
+
+<br/>
+Realizado de acordo com as diretrizes do <a href="https://blog.betrybe.com/wp-content/uploads/2020/12/Código-de-Conduta-Trybe-1.pdf" >Código de Conduta e do Manual da Pessoa Estudante da Trybe</a>.</div>
